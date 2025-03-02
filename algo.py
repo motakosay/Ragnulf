@@ -36,7 +36,7 @@ from utils import croix_valide, ftl_valide, cfop_valide
 from stats import *
 from utils import croix_valide, ftl_valide, cfop_valide, replace_sublist
 
-SHORTCUTS = "shortcuts.json"
+SHORTCUTS = "/content/Ragnulf/shortcuts.json"
 
 def algo_cfop(c):
     '''
