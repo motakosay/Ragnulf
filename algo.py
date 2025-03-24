@@ -39,7 +39,7 @@ from utils import croix_valide, ftl_valide, cfop_valide, replace_sublist
 SHORTCUTS = "/content/Ragnulf/shortcuts.json"
 
 
-#mainFunction
+#mainFunction.........c is faces of cube, and it returns steps of solution
 def algo_cfop(c):
     '''
     algo
