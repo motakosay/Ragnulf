@@ -41,6 +41,7 @@ SHORTCUTS = "/content/Ragnulf/shortcuts.json"
 
 #mainFunction.........c is facets (small squares), and it returns steps of solution
 def algo_cfop(c):
+#c "facets" is instance of class of cube
     '''
     algo
 
