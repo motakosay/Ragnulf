@@ -62,7 +62,7 @@ def algo_cfop(c):
 #function return false if  face doesn't have same color of facets in face_resolue
     face_resolue = lambda x: x.face_resolue('U')
     resolu = lambda x: x.resolu() #this resolu func see if whole cube solved or not!
-    noop = lambda x: (x, ())
+    noop = lambda x: (x, ()) #is short for "no operation"
 
     cube, mouv = cross_facile(c) #on commence par la croix
 
