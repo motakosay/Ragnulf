@@ -61,7 +61,7 @@ def algo_cfop(c):
 # x is instance of class cube....face_resolue is method check if a specific face of the Rubik's cube is solved like U Yellow
 #function return false if  face doesn't have same color of facets in face_resolue
     face_resolue = lambda x: x.face_resolue('U')
-    resolu = lambda x: x.resolu()
+    resolu = lambda x: x.resolu() #this resolu func see if whole cube solved or not!
     noop = lambda x: (x, ())
 
     cube, mouv = cross_facile(c) #on commence par la croix
