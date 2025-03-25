@@ -57,6 +57,7 @@ def algo_cfop(c):
                     différents mouvements à effectuer pour résoudre le cube
     '''
 
+# x is instance of class cube 
     face_resolue = lambda x: x.face_resolue('U')
     resolu = lambda x: x.resolu()
     noop = lambda x: (x, ())
