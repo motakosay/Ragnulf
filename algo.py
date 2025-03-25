@@ -64,7 +64,8 @@ def algo_cfop(c):
     resolu = lambda x: x.resolu() #this resolu func see if whole cube solved or not!
     noop = lambda x: (x, ()) #is short for "no operation"
 
-    cube, mouv = cross_facile(c) #on commence par la croix
+    cube, mouv = cross_facile(c) #on commence par la croix...........which is to solve the cross on one face of the cube. 
+#this function return the new posistions of facets and moves preformed on given cube too get the new posistions of facets
 
     #on continue en vérifiant l'état précédant à chaque étape
     for (k, f) in ( #après vérification de chaque condition k
