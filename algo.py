@@ -139,7 +139,7 @@ def cross_facile(c):
                                 Liste des mouvements à faire
     '''
 
-    mouvementsTemp = () #liste des mouvements à effectués pour avancer dans l'algo
+    mouvementsTemp = () #liste des mouvements à effectués pour avancer dans l'algo....list of movement should done to solve
     mouvementsTotal = ()
 
     #On veut mettre l'arrête bleue-blanche à côté de la pièce centrale blanche
