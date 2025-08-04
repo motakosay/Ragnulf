@@ -142,10 +142,10 @@ def cross_facile(c):
     mouvementsTemp = () #liste des mouvements à effectués pour avancer dans l'algo....list of movement should done to solve
     mouvementsTotal = ()
 
-    #On veut mettre l'arrête bleue-blanche à côté de la pièce centrale blanche
+    #On veut mettre l'arrête bleue-blanche à côté de la pièce centrale blanche........we try to put blue-white edge beside white center
     #ie. la placer en FB jsute en dessous la pièce centrale bleue
 
-    #On cherche l'arête bleue blanche
+    #On cherche l'arête bleue blanche.........we search on edge white-blue
     if c.cube_contient_couleur('FU', 0, 1): #Si elle est sur la première couronne
         mouvementsTemp = ('F2',)
     elif c.cube_contient_couleur('RU', 0, 1):
