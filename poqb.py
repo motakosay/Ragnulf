@@ -82,6 +82,7 @@ if __name__=="__main__":
             tuto(cube_lu, resolution)
         if 'tuto_manual' in params:
             tuto_manual()
+            sys.exit(0)
 
         print('Résolution de :', "".join([colorize(x) for x in cube]) +'\n')
         resolution = " ".join([translate_mvt(x) for x in resolution])
