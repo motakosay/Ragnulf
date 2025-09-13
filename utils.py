@@ -42,7 +42,8 @@ def readArgs():
         'tuto',
         'auto',
         'colors',
-        'moves']
+        'moves',
+        'tuto_manual']
     )
 
     arguments = {k: v for k, v in optlist} #on tranforme la list en dict
