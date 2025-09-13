@@ -1,4 +1,4 @@
-![Newcastle Vikings Logo from Wikipedia by Garethom](https://upload.wikimedia.org/wikipedia/commons/3/33/NewcastleVikingsLogo.PNG)
+![Newcastle Vikings Logo](images/NewcastleVikingsLogo.PNG)
 
 Ragnulf
 =======
