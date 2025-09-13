@@ -3,6 +3,7 @@ from utils import Array, colorize, translate_mvt, readArgs
 from algo import algo_cfop
 from lire_entree import lecture_cube
 from tuto import tuto
+from tuto_manual import tuto_manual
 
 DEFAULT_CUBE = 'OGRBWYBGBGYYOYOWOWGRYOOOBGBRRYRBWWWRBWYGROWGRYBRGYWBOG'
 
@@ -79,6 +80,8 @@ if __name__=="__main__":
         if 'tuto' in params:
             print('Résolution de :', "".join([colorize(x) for x in cube]))
             tuto(cube_lu, resolution)
+        if 'tuto_manual' in params:
+            tuto_manual()
 
         print('Résolution de :', "".join([colorize(x) for x in cube]) +'\n')
         resolution = " ".join([translate_mvt(x) for x in resolution])
