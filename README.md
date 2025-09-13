@@ -35,6 +35,10 @@ python poqb.py [--cube | -c] <cube> [--tuto] [--auto] [--speed | -s] <speed>  [-
 
     Activer le mode tutoriel qui affiche la résoltution du cube pas à pas.
 
+- `--tuto_manual` (optionnel).
+
+    Launches an interactive step-by-step tutorial with written instructions to solve the Rubik’s Cube manually.
+
 - `--auto` (optionnel).
 
     Avec `--tuto`, avancée automatique.
