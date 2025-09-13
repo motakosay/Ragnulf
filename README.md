@@ -1,4 +1,4 @@
-![Newcastle Vikings Logo](images/NewcastleVikingsLogo.PNG)
+![Newcastle Vikings Logo](NewcastleVikingsLogo.PNG)
 
 Ragnulf
 =======
