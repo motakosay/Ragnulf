@@ -66,6 +66,9 @@ def readArgs():
     if '--tuto' in arguments:
         result['tuto'] = arguments['--tuto'] #--tuto override -t
 
+    if '--tuto_manual' in arguments:
+        result['tuto_manual'] = arguments['--tuto_manual'] #--tuto_manual override -t
+
     if '-a' in arguments:
         result['auto'] = arguments['-a']
 
