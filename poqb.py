@@ -72,7 +72,7 @@ if __name__=="__main__":
     params = readArgs()
     if 'tuto_manual' in params:
         tuto_manual()
-        sys.exit(0)
+        raise SystemExit
     cube = str(params['cube']) if 'cube' in params else DEFAULT_CUBE
 
     err, resolution, cube_lu = solve_full(cube)
