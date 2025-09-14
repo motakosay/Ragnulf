@@ -27,7 +27,7 @@ def get_key():
     finally:
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
 
-def tutorial_manual():
+def tuto_manual():
     steps = [
         "Step 1: Hold the cube with the white face on the bottom and the blue face toward you.",
         "Step 2: Make the white cross on the bottom face.",
