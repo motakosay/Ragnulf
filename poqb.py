@@ -61,9 +61,6 @@ def solve_full(cube_c54):
             else (None, mouvements, cube_lu)
 
 if __name__=="__main__":
-    if 'tuto_manual' in params:
-        tuto_manual()
-        sys.exit(0)
     """
     :Example:
         python poqb.py
@@ -73,6 +70,9 @@ if __name__=="__main__":
 
     #On récupère le cube en paramètre ou on utilise celui par défaut
     params = readArgs()
+    if 'tuto_manual' in params:
+        tuto_manual()
+        sys.exit(0)
     cube = str(params['cube']) if 'cube' in params else DEFAULT_CUBE
 
     err, resolution, cube_lu = solve_full(cube)
