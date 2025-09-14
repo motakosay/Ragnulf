@@ -61,6 +61,9 @@ def solve_full(cube_c54):
             else (None, mouvements, cube_lu)
 
 if __name__=="__main__":
+    if 'tuto_manual' in params:
+        tuto_manual()
+        sys.exit(0)
     """
     :Example:
         python poqb.py
@@ -80,9 +83,6 @@ if __name__=="__main__":
         if 'tuto' in params:
             print('Résolution de :', "".join([colorize(x) for x in cube]))
             tuto(cube_lu, resolution)
-        if 'tuto_manual' in params:
-            tuto_manual()
-            sys.exit(0)
 
         print('Résolution de :', "".join([colorize(x) for x in cube]) +'\n')
         resolution = " ".join([translate_mvt(x) for x in resolution])
