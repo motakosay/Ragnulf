@@ -1,6 +1,31 @@
 # tuto_manual.py
 import os
-from utils import get_key
+import sys
+import termios
+import tty
+
+def get_key():
+    """Wait for a key press and return 'LEFT', 'RIGHT', 'ENTER', or 'OTHER'."""
+    fd = sys.stdin.fileno()
+    old_settings = termios.tcgetattr(fd)
+    try:
+        tty.setraw(fd)
+        ch1 = sys.stdin.read(1)
+        if ch1 == "\x1b":  # Arrow keys start with ESC
+            ch2 = sys.stdin.read(1)
+            ch3 = sys.stdin.read(1)
+            if ch3 == "D":
+                return "LEFT"
+            elif ch3 == "C":
+                return "RIGHT"
+            else:
+                return "OTHER"
+        elif ch1 == "\r":
+            return "ENTER"
+        else:
+            return "OTHER"
+    finally:
+        termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
 
 def tutorial_manual():
     steps = [
