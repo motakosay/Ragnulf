@@ -4,8 +4,8 @@ def clear_screen():
     print("\n")
 
 def get_key():
-    key = input("Type LEFT, RIGHT or EXIT: ").strip().upper()
-    if key in ("LEFT", "RIGHT", "EXIT"):
+    key = input("Type NEXT or EXIT: ").strip().upper()
+    if key in ("NEXT", "EXIT"):
         return key
     return "OTHER"
 
@@ -25,13 +25,15 @@ def tuto_manual():
     while True:
         clear_screen()
         print(f"{steps[idx]}\n")
-        print("Type LEFT ← | RIGHT → | EXIT to exit")
+        print("Type NEXT → | EXIT to exit")
 
         key = get_key()
-        if key == "LEFT" and idx > 0:
-            idx -= 1
-        elif key == "RIGHT" and idx < len(steps) - 1:
-            idx += 1
+        if key == "NEXT":
+            if idx < len(steps) - 1:
+                idx += 1
+            else:
+                print("\nTutorial finished. 🎉")
+                break
         elif key == "EXIT":
             print("\nTutorial finished. 🎉")
             break
