@@ -1,7 +1,7 @@
 # tuto_manual.py
 
 def clear_screen():
-    print("\n" * 50)
+    print("\n") #print("\n" * 50)
 
 def get_key():
     key = input("Type LEFT, RIGHT or EXIT: ").strip().upper()
