@@ -2,8 +2,8 @@
 import os
 
 def get_key():
-    key = input("Type LEFT, RIGHT or ENTER: ").strip().upper()
-    if key in ("LEFT", "RIGHT", "ENTER"):
+    key = input("Type LEFT, RIGHT or EXIT ").strip().upper()
+    if key in ("LEFT", "RIGHT", "EXIT"):
         return key
     return "OTHER"
 
