@@ -2,10 +2,6 @@
 import os
 
 def get_key():
-    """
-    Simplified key input for Colab.
-    Ask the user to type LEFT, RIGHT, or ENTER (case-insensitive).
-    """
     key = input("Type LEFT, RIGHT or ENTER: ").strip().upper()
     if key in ("LEFT", "RIGHT", "ENTER"):
         return key
@@ -25,9 +21,7 @@ def tuto_manual():
 
     idx = 0
     while True:
-        # clear the screen (optional, just adds separation in Colab)
         os.system('cls' if os.name == 'nt' else 'clear')
-        print("\nManual Tutorial Mode (Colab version)\n")
         print(f"{steps[idx]}\n")
         print("Type LEFT ← | RIGHT → | ENTER to exit")
 
