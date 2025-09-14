@@ -1,42 +1,32 @@
 # tuto_manual.py
 import os
-from utils_input import get_key
+from utils import get_key
 
-INSTRUCTIONS = [
-    "Hold the cube with the white face on the bottom and the blue face in front.",
-    "Build the white cross by aligning the white edge pieces with the centers.",
-    "Insert the white corner pieces to complete the first layer.",
-    "Solve the middle layer by inserting the edge pieces.",
-    "Orient the last layer (OLL) so the top face is all yellow.",
-    "Permute the last layer (PLL) to finish the cube.",
-    "Congratulations! Your cube is solved!"
-]
+def tutorial_manual():
+    steps = [
+        "Step 1: Hold the cube with the white face on the bottom and the blue face toward you.",
+        "Step 2: Make the white cross on the bottom face.",
+        "Step 3: Solve the white corners to finish the first layer.",
+        "Step 4: Solve the middle layer edges.",
+        "Step 5: Make the yellow cross on top.",
+        "Step 6: Orient all yellow corners.",
+        "Step 7: Permute the last layer edges.",
+        "Step 8: Permute the last layer corners. Cube is solved!"
+    ]
 
-def clear_screen():
-    os.system("cls" if os.name == "nt" else "clear")
-
-def tuto_manual():
-    """
-    Interactive manual tutorial with navigation:
-    → or Enter = next step
-    ← = previous step
-    q = quit
-    """
     idx = 0
-    while 0 <= idx < len(INSTRUCTIONS):
-        clear_screen()
-        step_text = INSTRUCTIONS[idx]
-        print("Manual Tutorial (Step-by-Step)")
-        print("→ or Enter = next, ← = previous, q = quit\n")
-        print(f"[ Step {idx+1}/{len(INSTRUCTIONS)} ]\n{step_text}")
+    while True:
+        # clear the screen
+        os.system('cls' if os.name == 'nt' else 'clear')
+
+        print("Manual Tutorial Mode (no ASCII art)\n")
+        print(f"{steps[idx]}\n")
+        print("← Previous | → Next | ENTER to exit")
 
         key = get_key()
-
-        if key in ("RIGHT", "ENTER"):
+        if key == "LEFT" and idx > 0:
+            idx -= 1
+        elif key == "RIGHT" and idx < len(steps) - 1:
             idx += 1
-        elif key == "LEFT":
-            idx = max(0, idx - 1)
-        elif key.lower() == "q":
-            clear_screen()
-            print("Tutorial exited by user.")
+        elif key == "ENTER":
             break
