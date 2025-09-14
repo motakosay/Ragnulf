@@ -1,8 +1,10 @@
 # tuto_manual.py
-import os
+
+def clear_screen():
+    print("\n" * 50)
 
 def get_key():
-    key = input("Type LEFT, RIGHT or EXIT:").strip().upper()
+    key = input("Type LEFT, RIGHT or EXIT: ").strip().upper()
     if key in ("LEFT", "RIGHT", "EXIT"):
         return key
     return "OTHER"
@@ -21,7 +23,7 @@ def tuto_manual():
 
     idx = 0
     while True:
-        os.system('cls' if os.name == 'nt' else 'clear')
+        clear_screen()
         print(f"{steps[idx]}\n")
         print("Type LEFT ← | RIGHT → | EXIT to exit")
 
