@@ -89,9 +89,9 @@ def tuto_manual():
                 "Put the corner above its correct position (corner colors same as centers).",
                 "Place the corner to move into the position as shown in the figure.",
                 "There are 3 cases:",
-                "- White front: R U R' U'",
-                "- White right: R U R'",
-                "- White up: R U2 R' U' R U R'"
+                "White front: R U R' U'",
+                "White right: R U R'",
+                "White up: R U2 R' U' R U R'"
             ],
             "algo": "Final Alg: R U R' U'",
             "show_cube": True
