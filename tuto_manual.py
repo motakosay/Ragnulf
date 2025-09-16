@@ -6,8 +6,8 @@ def clear_screen():
     print("\n" * 3)
 
 def get_key():
-    key = input("Type * for NEXT or EXIT to quit: ").strip().upper()
-    if key == "*":
+    key = input("Type NEXT for NEXT or EXIT to quit: ").strip().upper()
+    if key == "NEXT":
         return "NEXT"
     elif key == "EXIT":
         return "EXIT"
@@ -74,7 +74,7 @@ def render_cube():
 def tuto_manual():
     steps = [
         {
-            "title": "*cross",
+            "title": "cross",
             "desc": [
                 "Cross pieces align with the center colors",
                 "Just simple movements to do cross"
@@ -83,7 +83,7 @@ def tuto_manual():
             "show_cube": False
         },
         {
-            "title": "*cross_corners",
+            "title": "cross_corners",
             "desc": [
                 "Find corners that have white on one face.",
                 "Put the corner above its correct position (corner colors same as centers).",
@@ -112,7 +112,7 @@ def tuto_manual():
         if step["show_cube"]:
             print("\n" + render_cube())
 
-        print("\nType * → for NEXT | EXIT to quit")
+        print("\nType NEXT → for NEXT | EXIT to quit")
 
         key = get_key()
         if key == "NEXT":
