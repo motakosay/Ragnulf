@@ -87,7 +87,7 @@ def tuto_manual():
             "desc": [
                 "Find corners that have white on one face.",
                 "Put the corner above its correct position (corner colors same as centers).",
-                "Place the corner to move into the position shown in the figure.",
+                "Place the corner to move into the position as shown in the figure.",
                 "There are 3 cases:",
                 "- White front: R U R' U'",
                 "- White right: R U R'",
