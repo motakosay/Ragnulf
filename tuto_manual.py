@@ -78,6 +78,7 @@ def tuto_manual():
             "desc": [
                 "Cross pieces align with the center colors",
                 "Just simple movements to do cross"
+                "You 'll need F2L Alg sometimes, Follow the tutorial."
             ],
             "algo": None,
             "show_cube": False
