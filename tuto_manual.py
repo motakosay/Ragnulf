@@ -2,21 +2,18 @@
 from colorama import Fore, Style, init
 init(autoreset=True)
 
-# ⚙️ Choose theme manually: "dark" (black background) or "light" (white background)
-theme = "dark"   # change to "light" if your terminal background is white
-
 def clear_screen():
     print("\n" * 3)
 
 def get_key():
-    key = input("Type NEXT for NEXT or EXIT to quit: ").strip().upper()
-    if key == "NEXT":
+    key = input("Type * for NEXT or EXIT to quit: ").strip().upper()
+    if key == "*":
         return "NEXT"
     elif key == "EXIT":
         return "EXIT"
     return "OTHER"
 
-# Cube ASCII art (structure)
+# Cube ASCII art
 cube_str = """\
                               
                               
@@ -39,14 +36,7 @@ cube_str = """\
 """
 
 def render_cube():
-    # Theme-dependent colors
-    if theme == "dark":
-        line_color = Fore.LIGHTBLACK_EX   # cube lines = gray
-        white_color = Fore.WHITE         # stickers = white
-    else:  # light background
-        line_color = Fore.BLACK          # cube lines = black
-        white_color = Fore.LIGHTBLACK_EX # stickers = gray
-
+    # Split cube into lines
     lines = cube_str.split("\n")
     colored_positions = {}
 
@@ -55,30 +45,28 @@ def render_cube():
             colored_positions[line_idx] = {}
         colored_positions[line_idx].update(char_color_map)
 
-    # 🎨 Example coloring for cross_corners
+    # 🎨 Example colors for cross_corners step
     color_multiple_chars(6, {20: Fore.BLUE, 21: Fore.BLUE, 22: Fore.BLUE})
     color_multiple_chars(7, {18: Fore.BLUE, 19: Fore.BLUE, 20: Fore.BLUE, 21: Fore.BLUE, 22: Fore.BLUE, 23: Fore.RED})
-    color_multiple_chars(8, {24: Fore.RED, 23: Fore.RED, 21: white_color, 17: white_color})
-    color_multiple_chars(9, {24: Fore.RED, 23: Fore.RED, 22: Fore.RED, 
-                             21: white_color, 20: white_color, 19: white_color,
-                             18: white_color, 17: white_color,
-                             16: Fore.BLUE, 15: Fore.BLUE, 14: Fore.BLUE})
+    color_multiple_chars(8, {24: Fore.RED, 23: Fore.RED, 21: Fore.WHITE, 17: Fore.WHITE})
+    color_multiple_chars(9, {24: Fore.RED, 23: Fore.RED, 22: Fore.RED, 21: Fore.WHITE, 20: Fore.WHITE, 19: Fore.WHITE,
+                             18: Fore.WHITE, 17: Fore.WHITE, 16: Fore.BLUE, 15: Fore.BLUE, 14: Fore.BLUE})
     color_multiple_chars(10, {13: Fore.BLUE, 17: Fore.BLUE})
     color_multiple_chars(11, {13: Fore.BLUE, 14: Fore.BLUE, 15: Fore.BLUE, 16: Fore.BLUE, 17: Fore.BLUE,
-                              18: Fore.YELLOW, 19: Fore.YELLOW, 20: Fore.YELLOW,
-                              22: Fore.BLUE, 23: Fore.BLUE})
+                              18: Fore.YELLOW, 19: Fore.YELLOW, 20: Fore.YELLOW, 22: Fore.BLUE, 23: Fore.BLUE})
     color_multiple_chars(12, {17: Fore.YELLOW, 21: Fore.YELLOW, 23: Fore.BLUE})
     color_multiple_chars(13, {17: Fore.YELLOW, 18: Fore.YELLOW, 19: Fore.YELLOW,
                               20: Fore.YELLOW, 21: Fore.YELLOW, 22: Fore.BLUE})
 
-    # Apply default line color
+    # 🖤 Apply default color
+    default_color = Fore.LIGHTBLACK_EX
     for idx, line in enumerate(lines):
         new_line = ""
         for i, ch in enumerate(line):
             if idx in colored_positions and i in colored_positions[idx]:
                 new_line += colored_positions[idx][i] + ch + Style.RESET_ALL
             else:
-                new_line += line_color + ch + Style.RESET_ALL
+                new_line += default_color + ch + Style.RESET_ALL
         lines[idx] = new_line
 
     return "\n".join(lines)
@@ -86,7 +74,7 @@ def render_cube():
 def tuto_manual():
     steps = [
         {
-            "title": "cross",
+            "title": "*cross",
             "desc": [
                 "Cross pieces align with the center colors",
                 "Just simple movements to do cross"
@@ -95,7 +83,7 @@ def tuto_manual():
             "show_cube": False
         },
         {
-            "title": "cross_corners",
+            "title": "*cross_corners",
             "desc": [
                 "Find corners that have white on one face.",
                 "Put the corner above its correct position (corner colors same as centers).",
@@ -124,7 +112,7 @@ def tuto_manual():
         if step["show_cube"]:
             print("\n" + render_cube())
 
-        print("\nType NEXT → for NEXT | EXIT to quit")
+        print("\nType * → for NEXT | EXIT to quit")
 
         key = get_key()
         if key == "NEXT":
