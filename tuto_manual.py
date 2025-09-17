@@ -149,7 +149,7 @@ def tuto_manual():
                 "You want finish the second layer.",
                 "See edge that has 2 colors of 2 centers.",
                 "in figure",
-                'You 'll see when use Alg "to right" edge move from bottom to right.',
+                "You 'll see when use Alg 'to right' edge move from bottom to right.",
                 "Next, You 'll search for edge to move to left."
             ],
             "algo": "To Right: D' R' D R D F D' F'\nTo Left: D L D' L' D' F' D F",
