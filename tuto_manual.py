@@ -94,10 +94,13 @@ def render_cube(name="cross_corners"):
             colored_positions[line_idx].update(char_color_map)
 
         # Example coloring for F2L case (blue edge moving right)
-        color_multiple_chars(2, {11: Fore.BLUE, 12: Fore.BLUE, 13: Fore.BLUE,
-                                 31: Fore.BLUE, 32: Fore.BLUE, 33: Fore.BLUE})
-        color_multiple_chars(4, {15: Fore.GREEN, 16: Fore.GREEN, 35: Fore.GREEN, 36: Fore.GREEN})
-        color_multiple_chars(6, {17: Fore.RED, 37: Fore.RED})
+        color_multiple_chars(2, {11: Fore.BLUE, 12: Fore.BLUE, 13: Fore.BLUE, 15: Fore.BLUE , 16: Fore.BLUE, 17: Fore.BLUE, 19:Fore.BLUE, 20:Fore.BLUE, 31:Fore.BLUE, 32:Fore.BLUE, 33:Fore.BLUE, 35:Fore.BLUE, 36:Fore.BLUE, 37:Fore.BLUE, 39:Fore.BLUE, 40:Fore.BLUE })
+        color_multiple_chars(3, {9: Fore.BLUE, 13: Fore.BLUE, 17: Fore.BLUE, 21: Fore.BLUE, 22: Fore.BLUE, 29:Fore.BLUE, 33:Fore.BLUE, 37:Fore.BLUE, 41:Fore.BLUE})
+        color_multiple_chars(4, {9: Fore.BLUE, 10: Fore.BLUE, 11:Fore.BLUE, 12:Fore.BLUE, 13: Fore.BLUE, 14:Fore.BLUE, 15: Fore.BLUE, 16: Fore.BLUE , 17: Fore.BLUE, 18: Fore.BLUE, 19: Fore.BLUE, 20: Fore.BLUE ,21: Fore.BLUE, 22: Fore.BLUE, 29:Fore.BLUE, 30:Fore.BLUE, 31:Fore.BLUE, 32:Fore.BLUE, 33:Fore.BLUE, 34:Fore.BLUE, 35:Fore.BLUE, 36:Fore.BLUE, 37:Fore.BLUE, 38:Fore.BLUE, 39:Fore.BLUE, 40:Fore.BLUE, 41:Fore.BLUE})
+        color_multiple_chars(5, {13: Fore.BLUE, 17:Fore.BLUE, 33:Fore.BLUE, 37:Fore.BLUE,41:Fore.BLUE})
+        color_multiple_chars(6, {13: Fore.BLUE, 14: Fore.BLUE, 15:Fore.BLUE, 16:Fore.BLUE ,17:Fore.BLUE, 33:Fore.BLUE, 34:Fore.BLUE, 35:Fore.BLUE, 36:Fore.BLUE, 37:Fore.BLUE,38 :Fore.BLUE, 39:Fore.BLUE, 40:Fore.BLUE, 41:Fore.BLUE})
+        color_multiple_chars(7, {13: Fore.BLUE, 17:Fore.BLUE})
+        color_multiple_chars(8, {13: Fore.BLUE, 14: Fore.BLUE, 15:Fore.BLUE, 16:Fore.BLUE ,17:Fore.BLUE})
 
         default_color = Fore.LIGHTBLACK_EX
         for idx, line in enumerate(lines):
