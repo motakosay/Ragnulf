@@ -145,11 +145,12 @@ def tuto_manual():
         {
             "title": "F2L",
             "desc": [
-                "Now we solve the First Two Layers (F2L).",
-                "Look for a corner and its matching edge pair.",
-                "Align the edge with the correct center.",
-                "Use the algorithm to insert the pair into the slot.",
-                "This example shows moving an edge into the right slot."
+                "Now you built the first layer.",
+                "You want finish the second layer.",
+                "See edge that has 2 colors of 2 centers.",
+                "in figure",
+                "You 'll see when use Alg "to right" edge move from bottom to right.",
+                "next, You 'll search for edge to move to left."
             ],
             "algo": "To Right: D' R' D R D F D' F'\nTo Left: D L D' L' D' F' D F",
             "show_cube": "F2L"
