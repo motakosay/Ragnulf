@@ -21,7 +21,7 @@ python poqb.py --cube OGRBWYBGBGYYOYOWOWGRYOOOBGBRRYRBWWWRBWYGROWGRYBRGYWBOG
 
 ## Terminal
 ```bash
-python poqb.py [--cube | -c] <cube> [--tuto] [--auto] [--speed | -s] <speed>  [--moves] [--colors]
+python poqb.py [--cube | -c] <cube> [--tuto] [--auto] [--speed | -s] <speed>  [--moves] [--colors] [--tuto_manual]
 ```
 
 - `--cube <cube>` (optionnel). Un cube à résoudre.
