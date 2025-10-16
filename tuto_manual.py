@@ -377,7 +377,7 @@ def tuto_manual():
         {
             "title": "OLL - AntiSune",
             "desc": ["5-Anti-Sune: hold cube as in figure"],
-            "algo": "L' U' L U' L' U2 L",
+            "algo": "L' U' L U' L' U2' L",
             "show_cube": "OLL-AntiSune"
         },
         {
