@@ -326,7 +326,7 @@ def tuto_manual():
                 "There are 3 cases:",
                 "- White front: U R U' R'",
                 "- White right: R U R'",
-                "- White up: R U2 R' U R U R'"
+                "- White up: R U2 R' U' R U R'"
             ],
             "algo": None,
             "show_cube": "cross_corners"
