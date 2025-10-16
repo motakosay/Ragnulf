@@ -324,7 +324,7 @@ def tuto_manual():
                 "Put the corner above its correct position (corner colors same as centers).",
                 "Place the corner into the position shown in the figure.",
                 "There are 3 cases:",
-                "- White front: R U R' U'",
+                "- White front: U R U' R'",
                 "- White right: R U R'",
                 "- White up: R U2 R' U R U R'"
             ],
