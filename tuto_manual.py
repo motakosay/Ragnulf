@@ -425,7 +425,7 @@ def tuto_manual():
         {
             "title":"All Different = Diagonal Swap",
             "desc": ["look at pairs of corner stickers on each side. i.e.front face has red corner and orange corner 'different colors', right face has blue and green 'two different colors' and so on."],
-            "algo": "F R U' R U' R U R' F' R U R' U' R' F R F'",
+            "algo": "F R U' R' U' R U R' F' R U R' U' R' F R F'",
             "show_cube": "PLL-Diagonal_Swap"
         },
         {
