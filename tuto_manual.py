@@ -464,6 +464,12 @@ def tuto_manual():
             "algo": "M' U' M2 U' M2 U' M' U2 M2      'M is rotate middle layer.' ",
             "show_cube": "PLL-Adjacent_Edge_Swap"
         },
+        {
+            "title":"Memorizing Rubik's Algs",
+            "desc": ["You can watch YT video....story to memorizing 'https://www.youtube.com/watch?v=sqz85mjRziY' "],
+            "algo": None,
+            "show_cube": None
+        },
     ]
 
     idx = 0
